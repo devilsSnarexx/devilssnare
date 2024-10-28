@@ -249,3 +249,65 @@ body {
     margin: 0; /* Remove all margin */
     padding: 10px 0; /* Add padding if you need some space inside the paragraphs */
 }
+
+/* Base styles for visibility */
+.warning-container {
+    display: none; /* Hide by default */
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #081b29;
+    color: #ededed;
+    padding: 20px;
+    border: 2px solid #f00;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    text-align: center;
+    max-width: 90%;
+    width: 400px;
+    border-radius: 8px;
+}
+
+.warning-container h1 {
+    color: #f00;
+    font-size: 24px;
+}
+
+.warning-container h2 {
+    font-size: 20px;
+}
+
+.warning-container p {
+    font-size: 16px;
+    margin: 10px 0;
+}
+
+.btn-box.buttonCust a {
+    display: inline-block;
+    padding: 10px 20px;
+    text-decoration: none;
+    background-color: #f00;
+    color: #fff;
+    border-radius: 5px;
+    margin-top: 20px;
+}
+
+.btn-box.buttonCust a:hover {
+    background-color: #c00;
+}
+
+/* Hide Main Content for Small Screens */
+@media (max-width: 900px) {
+    /* Hide main content */
+    .header, .home, .home-sci, .navbar {
+        display: none;
+    }
+
+    /* Show warning content */
+    .warning-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+}
