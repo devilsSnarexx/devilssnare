@@ -28,6 +28,7 @@ body {
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    padding: 20px;
 }
 
 i {
@@ -74,4 +75,21 @@ button:nth-child(1) {
 button:nth-child(2) {
     margin-right: -200px;
     color: #00abf0;
+}
+
+@media (max-width: 600px) {
+    .wrapper {
+        width: 90%;
+        height: auto;
+    }
+
+    .btn-group {
+        flex-direction: column;
+        height: auto;
+    }
+
+    button {
+        position: static;
+        margin: 10px 0;
+    }
 }
